@@ -36,4 +36,4 @@ We decided to expressed our inputs as binary values to make the neural learn as 
 | [Thomas Faget](https://github.com/thomasfaget) | Dodge behavior |
 | [Florian Rumiel](https://github.com/FloRul)   | Learning with Neural Network, Controller |
 | [Vincent Pera](https://github.com/VincentPera) | Fuzzification principle  |
-| [Sacha Vanleenne](https://github.com/carnageusp)   | Team and loot weapons mechanism |
+| [Sacha Vanleenne](https://github.com/carnageusp)   | Team and loot weapons mechanism | 
