@@ -1,0 +1,336 @@
+﻿<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Raven</title>
+  <link rel="icon" href="images/chat.ico" />
+
+  <link rel="stylesheet" type="text/css" href="css/fonts/zorque-font.css" defer>
+  <link rel="stylesheet" type="text/css" href="css/base_stylesheet.css" defer>
+  <link rel="stylesheet" type="text/css" href="css/project_stylesheet.css" defer>
+<style>
+.keys {
+	display: block;
+	margin: 0 auto;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	padding: 1.3rem;
+	color: white;
+	text-align: center;
+	transition: all 300ms linear;
+	z-index: -1;
+}
+.keys > span {
+  z-index: 102;
+}
+form > div {
+    /*
+  transition: transform 400ms ease-out;*/
+  z-index: 1;
+  display: none;
+}
+label:before,
+label:after {
+	color: white;
+	display: block;
+	background: rgba(255,255,255,0.2);
+	position: absolute;
+	padding: 1rem;
+	font-size: 3rem;
+	height: 10rem;
+	vertical-align: middle;
+	line-height: 10rem;
+	top: 50%;
+	transform: translate3d(0, -50%, 0);
+	cursor: pointer;
+}
+label:before {
+	content: "\276D";
+	right: 100%;
+	border-top-left-radius: 50%;
+	border-bottom-left-radius: 50%;
+}
+label:after {
+	content: "\276C";
+	left: 100%;
+	border-top-right-radius: 50%;
+	border-bottom-right-radius: 50%;
+}
+input {
+  display: none;
+}
+form {
+  margin: 0 auto;
+  width: 100%;
+}
+input[type=radio]:checked + div {
+  display: block;
+    width: 100%;
+  /*transform: translate3d(-100%, 0, 0);*/
+}
+/*------------------*/
+/* Big Carousel section */
+/*------------------*/
+#carrousel-left-button img, #carrousel-right-button img {
+  margin: auto;
+}
+#carrousel-left-button:hover, #carrousel-right-button:hover {
+  background: #1e8696;
+}
+.left_chevron {
+	margin: 0 auto;
+	position: fixed;
+	display: block;
+	top: 0px;
+	left: 0px;
+	width: 15%;
+	text-align: center;
+	line-height: 100vh;
+}
+.left_chevron_legend {
+	font-size: 130%;
+	position: fixed;
+	left: 2%;
+	top: 52%;
+	width: 10%;
+	text-align: center;
+	word-wrap: break-word;
+	line-height: normal;
+	font-family: 'customfont';
+}
+.right_chevron {
+	position: fixed;
+	top: 0px;
+	right: 0px;
+	width: 15%;
+	text-align: center;
+	line-height: 100vh;
+}
+.right_chevron_legend {
+	margin: 0 auto;
+	font-size: 130%;
+	position: fixed;
+	right: 2%;
+	top: 52%;
+	width: 10%;
+	text-align: center;
+	word-wrap: break-word;
+	line-height: normal;
+	font-family: 'customfont';
+}
+.left_chevron:hover {
+	background: linear-gradient(to right, gray , white);
+	opacity: 0.40;
+}
+.right_chevron:hover  {
+	background: linear-gradient(to left, gray , white);
+	opacity: 0.40;
+}
+</style>
+</head>
+<nav class="menu-navbar" id="myNavbar">
+  <a class="menu-item" href="#overview_section">Overview</a>
+  <a class="menu-item" href="#gameplay_section">Gameplay Video</a>
+  <a class="menu-item" href="#detailed_section">Detailed Info</a>
+  <a href="javascript:void(0);" class="icon" onclick="functionMenus()"><span class="fa fa-bars fa-2x" aria-hidden="true"></span></a>
+  <nav class="nav-icon">
+    <a href="https://github.com/Graygzou/Raven-IA"><i class="fab fa-github fa-2x"></i></a>
+  </nav>
+</nav>
+<div id="myDropdown" class="dropdown-content">
+    <a class="menu-item" href="#overview_section">Overview</a>
+    <a class="menu-item" href="#gameplay_section">Gameplay Video</a>
+    <a class="menu-item" href="#detailed_section">Detailed Info</a>
+</div>
+<header>
+</header>
+<body>
+    <article id="main_page">
+	  <div id="picture_section"><img src="images/raven.png"></div>
+	  <h1 class="project_title" style="font-family: 'ravenfont'; font-size: 650%;">Raven</h1>
+	  <hr>
+
+	  <section id="overview_section">
+	    <h1 class="section_title"> <span class="fa fa-search" aria-hidden="true"></span> Overview</h1>
+	    <aside class="overview_table">
+		    <div><span class="table_title" style="font-size: 150%;">Platform:</span>	<br>Windows PC</div>
+		    <div><span class="table_title" style="font-size: 150%;">Tools Used:</span>	<br> Visual Studio </div>
+		    <div><span class="table_title" style="font-size: 150%;">Duration:</span>	<br> 1 month </div>
+		    <div><span class="table_title" style="font-size: 150%;">Team Size:</span>	<br> 6	</div>
+		    <div><span class="table_title" style="font-size: 150%;">Main Role:</span>	<br> Project Manager <br> Game Programmer <br> IA Programmer <br></div>
+	    </aside>
+	    <article class="description_side">
+		<p>
+		Raven is a top down 2D game, similar to a Quake-style deathmatch. It is originaly made by Mat Bucklandin his book, "Programming Game AI By Example". This application has been completed for a school project at the Université du Québec &#224 Chicoutimi (UQAC). The course is the following : <a href="http://cours.uqac.ca/8IAR125"> Artificial Intelligence for Video Games (8IAR125)</a>.
+		</p>
+		<p>
+		The gameplay of Raven is similar of a Quake-style deathmatch. When starting the game, severals bots spawned controlled by similar AI trying to win, by killing as many bots as possible. Bots can also pick up health or weapons if needed. The player could also take control of a bot by clicking on it. Ones the bot is controlled, some actions were possible like firing, switching weapons, etc. 
+		</p>
+		<h2 class="table_title">Project Goals</h2>
+		<ul>
+			<li>Learn and apply AI techniques used in video games.</li>
+			<li>Try making a neural network to train an AI.</li>
+			<li>Improved the game by adding more modes (team deathmatch, 1vs1)</li>
+			<li>Improved the game by adding more features (weapons, maps, ...).</li>
+		</ul>
+		<span class="table_title">Github Link</span>: <a href="https://github.com/Graygzou/Raven-IA">RAVEN Project</a>.
+	    </article>
+
+	  </section>
+	  <hr>
+	  
+	  <!--
+	  <section id="gameplay_section">
+	    <h1 class="section_title" style="font-size: 270%;"> <span class="fa fa-gamepad" aria-hidden="true"></span> Gameplay video</h1>
+		<iframe width="450" height="375" src="https://www.youtube.com/embed/">
+		</iframe>
+	  </section>-->
+	  <section id="gameplay_section">
+	    <h1 class="section_title"> <span class="fa fa-gamepad" aria-hidden="true"></span>Screenshots</h1>
+	    <div id="carousel">
+	      <div class="hideLeft">
+		<img src="images/Raven/raven.png"> 
+	      </div>
+
+	      <div class="prevLeftSecond">
+		<img src="images/Raven/team2.png"> 
+	      </div>
+
+	      <div class="prev">
+		<img src="images/Raven/1vs1-1.png"> 
+	      </div>
+
+	      <div class="selected">
+		<img src="images/Raven/1vs1-2.png"> 
+	      </div>
+
+	      <div class="next">
+		<img src="images/Raven/new-map.png"> 
+	      </div>
+
+	      <div class="nextRightSecond">
+		<img src="images/Raven/learningBot.png"> 
+	      </div>
+
+	      <div class="hideRight">
+		<img src="images/Raven/learningBot2.png"/>
+	      </div>
+
+	      <div class="hideRight">
+		<img src="images/Raven/fight1.png"> 
+	      </div>
+	      
+	      <div class="hideRight">
+		<img src="images/Raven/fight2.png"> 
+	      </div>
+
+	      <div class="hideRight">
+		<img src="images/Raven/miss-aim.png"> 
+	      </div>
+
+	      <div class="hideRight">
+		<img src="images/Raven/team1.png"> 
+	      </div>
+	      
+	      <div class="hideRight">
+		<img src="images/Raven/team3.png">
+	      </div>
+
+	      <div class="hideRight">
+		<img src="images/Raven/dodge1.png">
+	      </div>
+	      
+	      <div class="hideRight">
+		<img src="images/Raven/dodge2.png"> 
+	      </div>
+
+	      <div class="buttons">
+	      <span id="prev">
+		<i class="far fa-caret-square-right fa-3x" data-fa-transform="flip-v flip-h"></i>
+	      </span>
+	      <span id="next">
+		<i class="far fa-caret-square-right fa-3x"></i>
+	      </span>
+	    </div>
+	  </section>
+	  <hr>
+
+	  <section id="detailed_section">
+	    <h1 class="section_title"> <span class="fa fa-info-circle" aria-hidden="true"></span> Detailed Info</h1>
+	    <p> All the below techniques were already in the game or added by the team into Raven. </p>
+	    <p>The final goal was to make bots behave like human as much as possible and create the illusion to playing against thinking humans. </p>
+	    <h3>Added Features</h3>
+	    <ul>
+		    <li>A human player and custom controls (ZQSD movement with mouse scroll to switch weapons).</li>
+		    <li>Introduce "fuzzy logic" to bots.</li>
+		    <li>New weapon in the game : a grenade.</li>
+		    <li>Introduce a learning bot (create neural network and train it with game data).</li>
+		    <li>Two new modes : team deathmatch and Duel mode (1vs1).</li>
+		    <li>Three Bot behaviors for duel mode ("Burnhead", "Coward" and "Weapon Collector").</li>
+		    <li>Add a new map.</li>
+	    </ul>
+	    <h3>IA techniques</h3>
+	    <h4>Goal-Driven Agent Behavior</h4>
+	    <p> In this application Mat Buckland decided to add a "brain" to each bots in the game. This brain used goal-driven behavior to tell the bot what he should do right now based on game entries. </p>
+	    <h5>&bull; Goal decomposition</h5>
+	    <img class="class-diagram" src="images/Raven/goals-composite.png">
+	    <p> This process works just like the human brain : if you want to achieve something, you will decomposed this goal into many sub-goals easier to make archieve than the first one. And if it's not enough yet, keep doing this until sub-goals granularity are simple enough to be code by a function or a line of code. This can be done with the composite design pattern like the picture shows. </p>
+	    <p>
+	    We can noticed that goals have three methods : 
+	    <ul class="horizontal-list">
+		    <li>Activate()</li>
+		    <li>&middot; Process()</li>
+		    <li>&middot; Terminate()</li>
+	    </ul>
+	    Those are used to start a goal, keep track of the progress, and close a goal. This kind of abstraction is really useful, specially when game data make the bot change his goal priorities (ennemy showing up after passing a corner, ennemy fire coming from the back, etc.)
+	    </p>
+	    <h5>&bull; Goals arbitration</h5>
+	    <p>
+	    Once we know how to achieve each goal, we need to choose between available goals. To do so, a score is given to each goal for each update. This score is calculated with Desirability functions that take many game parameters in account and standardized to be in the range 0 (Low Desitability) to 1 (High Desirability). The goal with the highest desirability is chose to be the next goal.
+	    </p>
+	    <p>
+	    In addition, a memory has been add to be able to stop a current goal, make some actions and resume the previous main goal.
+	    </p>
+	    <h4>Fuzzy Logic</h4>
+	    <p>
+	    Fuzzy logic were also introduced to make bots choose their weapons based on the game context. Fuzzy logic is initially used to put values on vague linguistic terms like "small amount", "slightly", etc.
+	    </p>
+	    <p>
+	    Thanks to Bayesian statistics and probabilities, we can defined a fuzzy set that describe the desirability of a weapon based on a specific parameter. By adding fuzzy rules to it, we will be able to compute the final value which will tell the bot, based on a final fuzzy set, which weapon is the best right now.
+	    </p>
+	    <div class="bloc-images">
+		    <img src="images/Raven/ammo-fuzzy.png">
+		    <img src="images/Raven/weapon-fuzzy.png">
+	    </div>
+	    <h4>Neural Network</h4>
+	    <p>
+	    Finally, we implemented a neural network in this application to let a bot learned how to shoot. To do so, we used a multi-layer perceptron (MLP) and train it "to shoot or not" with specific inputs. Those inputs were the following :
+	    <ul>
+		    <li>Is the ennemy visible ? (0 or 1)</li>
+		    <li>Does the ennemy has maximum health ? (0 or 1)</li>
+		    <li>Does the learning bot has his maximum health ?</li>
+		    <li>The current weapon of the learning bot (6 through 9)</li>
+		    <li>Does the distance ennemy-learning bot is less than 200 pixels ? (0 or 1)</li>
+	    </ul>
+	    We used the backpropagation to trained the network, which is a traditional supervised learning technique. To make sure the net was trained, we made tests with other data than our training data and we analysed results. We've find out that our learning process were doing good and we finally tested it in-game.
+	    </p>
+	    <div class="bloc-images">
+		    <img src="images/Raven/network.png">
+		    <img src="images/Raven/results.png">
+	    </div>
+	    <p>
+	    The final results were correct since the learning bot shoot at the other bots. We even noticed that his score were slightly higher than the average.
+	    </p>
+	  </section>
+    </article>
+</body>
+<footer>
+  <i class="far fa-copyright"></i> Gregoire Boiron. All rights reserved.
+</footer>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" defer></script>
+<script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
+<script src="js/custom.js" defer></script>
